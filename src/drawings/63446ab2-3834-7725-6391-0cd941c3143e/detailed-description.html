@@ -1,0 +1,17 @@
+<p>
+  <span data-role="tag" data-value="63446ab2-3834-7725-6391-0cd941c3143e" id="id5b853aea-7955-4702-d3c1-3c6f4245d768" data-type="figure">Figure 4</span>&nbsp;illustrates&nbsp;an example of a 
+  <span data-role="tag" data-value="251fd547-20aa-70cd-c566-94c7e3c24297" id="idfb727721-7c38-1264-0c85-f8f9fa22808b" data-type="drawingObject">Faster Region-based Convolutional Network 400</span>&nbsp;(Faster R-CNN).
+</p>
+<p>Region proposals detected with the selective search method were still necessary in the previous model, which is computationally expensive.&nbsp;&nbsp;Region Proposal Network&nbsp;(RPN) was introduced to directly generate region proposals, predict bounding boxes and detect objects. The Faster R-CNN&nbsp;is a combination between the RPN and the Fast R-CNN model.</p>
+<p>A CNN model takes as input the entire image and produces 
+  <span data-role="tag" data-value="da4d57d7-6d55-3cd0-489d-0dee7dfadc26" id="idfe27c0b7-2809-d5aa-28a1-315d02ef6550" data-type="drawingObject">feature map 410</span>. A window of size 3x3 (
+  <span data-role="tag" data-value="cd8095f1-1b44-458e-a5d6-1a6a1e20246e" id="id7b9c9a57-6e65-84ce-0bfc-5ad3b2fc51a9" data-type="drawingObject">sliding window 402</span>) slides all the feature maps and outputs a features vector (
+  <span data-role="tag" data-value="649acdf1-7c73-0004-b3e1-cda4f931c1f8" id="id4af04fef-1984-2d29-acbe-ea961a8726bc" data-type="drawingObject">intermediate layer 404</span>) linked to two fully-connected layers, one for box-regression and one for box-classification. Multiple region proposals are predicted by the fully-connected layers. A maximum of k regions is fixed thus the output of the&nbsp;
+  <span data-role="tag" data-value="c00c466e-5d74-ab09-7a36-bd6d3d1669c6" id="id49500b7c-d264-672f-944d-d4ac3912c067" data-type="drawingObject">box regression layer 408</span>has a size of 4k (coordinates of the boxes, their height and width) and the output of the 
+  <span data-role="tag" data-value="3d4e9534-ac75-936f-f3f6-eb8d9c636799" id="id757dfe72-5730-36d6-0074-a643fae33b68" data-type="drawingObject">box classification layer 406</span>&nbsp;a size of 2k (“objectness” scores to detect an object or not in the box). The k region proposals detected by the sliding window are called anchors.
+</p>
+<p>When the 
+  <span data-role="tag" data-value="bb062edb-6b13-699a-e33e-a5a880e29391" id="id56ce167b-5184-d7a1-d2b3-b279c59a002e" data-type="drawingObject">anchor boxes 412</span> are detected, they are selected by applying a threshold over the “objectness” score to keep only the relevant boxes. These anchor boxes and the feature maps computed by the initial CNN model feeds a Fast R-CNN model.
+</p>
+<p>The entire image feeds a CNN model to produce anchor boxes as region proposals with a confidence to contain an object. A Fast R-CNN is used taking as inputs the feature maps and the region proposals. For each box, it produces probabilities to detect each object and correction over the location of the box.</p>
+<p>Faster R-CNN uses RPN to avoid the selective search method, it accelerates the training and testing processes, and improve the performances. The RPN uses a pre-trained model over the ImageNet dataset for classification and it is fine-tuned on the PASCAL VOC dataset. Then the generated region proposals with anchor boxes are used to train the Fast R-CNN. This process is iterative.</p>

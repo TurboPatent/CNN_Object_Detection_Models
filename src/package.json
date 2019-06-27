@@ -1,0 +1,146 @@
+{
+  "name": "CNN_Object_Detection_Models",
+  "description": "Common object detection models utilized on images for classification, localization, detection, and instance segmentation",
+  "owner": {
+    "login": "TurboPatent",
+    "type": "organization"
+  },
+  "license": "MIT",
+  "private": false,
+  "details": {
+    "counts": {
+      "termCount": 0,
+      "claimCount": 1,
+      "independentCount": 1,
+      "drawingCount": 4,
+      "glossaryCount": 0
+    },
+    "briefDescriptions": [
+      "<p>illustrates a comparison between image classification, object detection, and instance segmentation.</p>",
+      "<p>illustrates a <span data-type=\"drawingObject\" id=\"id67580e3f-8cd0-6d4f-80ba-7cfa8c97f11a\" data-value=\"b4d64ca4-7582-c989-dd04-e059fb3f7268\" data-role=\"tag\">Region-based Convolution Network 200</span>.</p>",
+      "<p>illustrates a <span data-type=\"drawingObject\" id=\"id78fb18a2-db3f-e830-8592-56e81e35aae7\" data-value=\"577cce73-5128-f71f-3458-a2a4bd854036\" data-role=\"tag\">Fast Region-based Convolutional Network 300</span>.</p>",
+      "<p>illustrates a <span data-type=\"drawingObject\" id=\"id64aa5610-2d2a-c119-b331-d8888155a944\" data-value=\"251fd547-20aa-70cd-c566-94c7e3c24297\" data-role=\"tag\">Faster Region-based Convolutional Network 400</span>.</p>"
+    ],
+    "parts": [
+      {
+        "name": "classification model",
+        "number": 102
+      },
+      {
+        "name": "classification and localization model",
+        "number": 104
+      },
+      {
+        "name": "bounding box",
+        "number": 106
+      },
+      {
+        "name": "object detection model",
+        "number": 108
+      },
+      {
+        "name": "instance segmentation model",
+        "number": 110
+      },
+      {
+        "name": "segmentation region",
+        "number": 112
+      },
+      {
+        "name": "Region-based Convolution Network",
+        "number": 200
+      },
+      {
+        "name": "ROI",
+        "number": 202
+      },
+      {
+        "name": "input image",
+        "number": 204
+      },
+      {
+        "name": "warped image region",
+        "number": 206
+      },
+      {
+        "name": "convolutional neural network",
+        "number": 208
+      },
+      {
+        "name": "bounding box linear regressors",
+        "number": 210
+      },
+      {
+        "name": "support vector machines",
+        "number": 212
+      },
+      {
+        "name": "Fast Region-based Convolutional Network",
+        "number": 300
+      },
+      {
+        "name": "convolutional neural network",
+        "number": 302
+      },
+      {
+        "name": "ROI",
+        "number": 304
+      },
+      {
+        "name": "input image",
+        "number": 306
+      },
+      {
+        "name": "ROI pooling layer",
+        "number": 308
+      },
+      {
+        "name": "feature maps",
+        "number": 310
+      },
+      {
+        "name": "fully connected layers",
+        "number": 312
+      },
+      {
+        "name": "softmax classifier",
+        "number": 314
+      },
+      {
+        "name": "bounding box linear regressors",
+        "number": 316
+      },
+      {
+        "name": "Faster Region-based Convolutional Network",
+        "number": 400
+      },
+      {
+        "name": "sliding window",
+        "number": 402
+      },
+      {
+        "name": "intermediate layer",
+        "number": 404
+      },
+      {
+        "name": "box classification layer",
+        "number": 406
+      },
+      {
+        "name": "box regression layer",
+        "number": 408
+      },
+      {
+        "name": "feature map",
+        "number": 410
+      },
+      {
+        "name": "anchor boxes",
+        "number": 412
+      }
+    ],
+    "terms": [],
+    "glossary": []
+  },
+  "repository": "https://github.com/TurboPatent/CNN_Object_Detection_Models"
+}
